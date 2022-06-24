@@ -26,6 +26,7 @@ if !1 | finish | endif
 set nocompatible
 set clipboard=unnamedplus
 set undofile
+set noswapfile
 set updatetime=100
 set number
 set relativenumber

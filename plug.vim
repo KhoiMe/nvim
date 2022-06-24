@@ -27,6 +27,8 @@ if has("nvim")
   Plug 'tami5/lspsaga.nvim'
   Plug 'folke/lsp-colors.nvim'
   Plug 'L3MON4D3/LuaSnip'
+  Plug 'simrat39/rust-tools.nvim'
+  Plug 'rust-lang/rust.vim'
   " Plug 'hrsh7th/cmp-nvim-lsp'
   " Plug 'hrsh7th/cmp-buffer'
   " Plug 'hrsh7th/nvim-cmp'
@@ -34,6 +36,7 @@ if has("nvim")
   Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
   Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 
+  Plug 'nvim-treesitter/nvim-treesitter-refactor'
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   Plug 'romgrk/nvim-treesitter-context'
   Plug 'kyazdani42/nvim-web-devicons'
@@ -58,6 +61,7 @@ if has("nvim")
   Plug 'pradyungn/Mountain', {'rtp': 'vim'}
   Plug 'mattn/emmet-vim'
   Plug 'bluz71/vim-moonfly-colors'
+  Plug 'whatsthatsmell/codesmell_dark.vim'
   Plug 'nvim-neo-tree/neo-tree.nvim'
 endif
 
