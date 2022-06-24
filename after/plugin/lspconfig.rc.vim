@@ -5,6 +5,8 @@ endif
 lua << EOF
 --vim.lsp.set_log_level("debug")
 require('rust-tools').setup({})
+require("grammar-guard").init()
+vim.cmd [[ autocmd BufRead,BufNewFile *.org set filetype=org ]]
 EOF
 
 lua << EOF
@@ -173,4 +175,5 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
+require'lspconfig'.ltex.setup{}
 EOF

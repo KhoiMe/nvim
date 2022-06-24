@@ -10,6 +10,7 @@ Plug 'tpope/vim-rhubarb'
 
 if has("nvim")
   Plug 'norcalli/nvim-colorizer.lua'
+  Plug 'sheerun/vim-polyglot'
   Plug 'mhinz/vim-signify'
   Plug 'gruvbox-community/gruvbox'
   Plug 'ThePrimeagen/harpoon'
@@ -26,6 +27,7 @@ if has("nvim")
   Plug 'williamboman/nvim-lsp-installer'
   Plug 'tami5/lspsaga.nvim'
   Plug 'folke/lsp-colors.nvim'
+  Plug 'brymer-meneses/grammar-guard.nvim'
   Plug 'L3MON4D3/LuaSnip'
   Plug 'simrat39/rust-tools.nvim'
   Plug 'rust-lang/rust.vim'
