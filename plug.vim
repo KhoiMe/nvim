@@ -54,7 +54,7 @@ if has("nvim")
   Plug 'tpope/vim-commentary'
   Plug 'MarcWeber/vim-addon-mw-utils'
   Plug 'tomtom/tlib_vim'
-  Plug 'garbas/vim-snipmate'
+  " Plug 'garbas/vim-snipmate'
   Plug 'svrana/neosolarized.nvim'
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'honza/vim-snippets'
@@ -64,7 +64,8 @@ if has("nvim")
   Plug 'mattn/emmet-vim'
   Plug 'bluz71/vim-moonfly-colors'
   Plug 'whatsthatsmell/codesmell_dark.vim'
-  Plug 'nvim-neo-tree/neo-tree.nvim'
+  " Plug 'nvim-neo-tree/neo-tree.nvim'
+  Plug 'lewis6991/impatient.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
@@ -73,3 +74,4 @@ Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 call plug#end()
 
 lua require'colorizer'.setup()
+lua require('impatient')

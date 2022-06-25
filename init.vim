@@ -1,21 +1,5 @@
 " Fundamentals "{{  {
 " ---------------------------------------------------------------------
-"
-"
-"" Nerdree Fundamentals
-let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
-let NERDTreeAutoDeleteBuffer=1
-let NERDTreeMinimalUI=1
-let NERDTreeDirArrows=1
-let NERDTreeShowLineNumbers=1
-let NERDTreeMapOpenInTab='\t'
-
-let g:coq_settings = { 'auto_start': 'shut-up' }
-
-" blankline setup
-let g:indent_blankline_char = '|'
-
 " init autocmd
 autocmd!
 " set script encoding
@@ -174,9 +158,20 @@ endif
 
 "}}}
 
-" Extras "{{{
+" Plugin simple calling "{{{
 " ---------------------------------------------------------------------
 set exrc
+
+"" Nerdree Fundamentals
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
+let NERDTreeAutoDeleteBuffer=1
+let NERDTreeMinimalUI=1
+let NERDTreeDirArrows=1
+let NERDTreeShowLineNumbers=1
+let NERDTreeMapOpenInTab='\t'
+let g:coq_settings = { 'auto_start': 'shut-up' }
+let g:indent_blankline_char = '|'
 "}}}
 
 " vim: set foldmethod=marker foldlevel=0:
