@@ -55,7 +55,7 @@ nmap <leader>q :q<CR>
 
 "Files management
 nmap <leader>ne :NERDTreeToggle<CR>  
-nmap <C-n> :NeoTreeFloatToggle<CR>
+nmap <C-l> :NeoTreeFloatToggle<CR>
 
 " Split window
 nmap ss :split<Return><C-w>w

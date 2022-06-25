@@ -6,7 +6,6 @@ autocmd!
 scriptencoding utf-8
 " stop loading config if it's on tiny or small
 if !1 | finish | endif
-
 set nocompatible
 set clipboard=unnamedplus
 set undofile
@@ -73,13 +72,6 @@ set formatoptions+=r
 " Highlights "{{{
 " ---------------------------------------------------------------------
 set cursorline
-"set cursorcolumn
-
-" Set cursor line color on visual mode
-highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
-
-highlight LineNr cterm=none ctermfg=240 guifg=#2b506e guibg=#000000
-
 augroup BgHighlight
   autocmd!
   autocmd WinEnter * set cul
@@ -146,7 +138,7 @@ if exists("&termguicolors") && exists("&winblend")
 "    let g:neosolarized_termtrans=1
 "    runtime ./colors/NeoSolarized.vim
 "    colorscheme NeoSolarized
-  colorscheme moonfly 
+  colorscheme moonfly
   lua << EOF
       vim.o.termguicolors = true
       vim.o.background = "dark"
@@ -172,6 +164,8 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
 let g:coq_settings = { 'auto_start': 'shut-up' }
 let g:indent_blankline_char = '|'
+let g:meh_pandoc_enabled = 1
+let g:enable_mountain_statusline = 1
 "}}}
 
 " vim: set foldmethod=marker foldlevel=0:

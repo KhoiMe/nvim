@@ -12,7 +12,6 @@ if has("nvim")
   Plug 'norcalli/nvim-colorizer.lua'
   Plug 'sheerun/vim-polyglot'
   Plug 'mhinz/vim-signify'
-  Plug 'gruvbox-community/gruvbox'
   Plug 'ThePrimeagen/harpoon'
   " Plug 'feline-nvim/feline.nvim'plu
   Plug 'itchyny/lightline.vim'
@@ -40,6 +39,7 @@ if has("nvim")
 
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+  Plug 'karb94/neoscroll.nvim'
   Plug 'romgrk/nvim-treesitter-context'
   Plug 'kyazdani42/nvim-web-devicons'
   " Plug 'nvim-lualine/lualine.nvim'
@@ -62,10 +62,20 @@ if has("nvim")
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'pradyungn/Mountain', {'rtp': 'vim'}
   Plug 'mattn/emmet-vim'
-  Plug 'bluz71/vim-moonfly-colors'
-  Plug 'whatsthatsmell/codesmell_dark.vim'
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   " Plug 'nvim-neo-tree/neo-tree.nvim'
   Plug 'lewis6991/impatient.nvim'
+  Plug 'mcchrish/zenbones.nvim'
+  Plug 'rktjmp/lush.nvim'
+  Plug 'fxn/vim-monochrome'
+  Plug 'davidosomething/vim-colors-meh'
+
+  " colorscheme
+  Plug 'bluz71/vim-moonfly-colors'
+  Plug 'gruvbox-community/gruvbox'
+  Plug 'projekt0n/github-nvim-theme'
+  Plug 'ntk148v/komau.vim'
+  Plug 'whatsthatsmell/codesmell_dark.vim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
