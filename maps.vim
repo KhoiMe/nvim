@@ -7,6 +7,8 @@ nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 nnoremap x "_x
 
+" yank to the end of the line
+nnoremap yl y$
 " Increment/decrement
 nnoremap + <C-a>
 nnoremap - <C-x>
@@ -41,7 +43,9 @@ nmap <leader>; :Commentary<CR>
 
 "Telescope
 nmap tb :Telescope oldfiles theme=dropdown<CR>
+nmap tr :Telescope lsp_references<CR>
 nmap <leader>gf :Telescope git_files theme=dropdown<CR>
+nmap tc :Telescope colorscheme<CR>
 nmap <leader>gb :Telescope git_branches theme=dropdown<CR>
 nmap <leader>sb :Telescope buffers theme=dropdown<CR>
 
@@ -54,8 +58,8 @@ nmap <leader>w :w !sudo dd of=%<CR>
 nmap <leader>q :q<CR>  
 
 "Files management
-nmap <leader>ne :NERDTreeToggle<CR>  
-nmap <C-l> :NeoTreeFloatToggle<CR>
+" nmap <leader>ne :NERDTreeToggle<CR>  
+nmap <leader>ne :NeoTreeFloatToggle<CR>
 
 " Split window
 nmap ss :split<Return><C-w>w

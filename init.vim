@@ -1,4 +1,4 @@
-" Fundamentals "{{  {
+" Fundamentals " {{{
 " ---------------------------------------------------------------------
 " init autocmd
 autocmd!
@@ -9,8 +9,9 @@ if !1 | finish | endif
 set nocompatible
 set clipboard=unnamedplus
 set undofile
+" set guicursor
 set noswapfile
-set updatetime=100
+set updatetime=50
 set number
 set relativenumber
 set termguicolors
@@ -21,7 +22,7 @@ set title
 set autoindent
 set background=dark
 set nobackup
-set hlsearch
+set nohlsearch
 set showcmd
 set cmdheight=1
 set laststatus=2
@@ -29,6 +30,7 @@ set scrolloff=10
 set expandtab
 "let loaded_matchparen = 1
 set backupskip=/tmp/*,/private/tmp/*
+
 
 " incremental substitution (neovim)
 if has('nvim')
@@ -71,7 +73,7 @@ set formatoptions+=r
 
 " Highlights "{{{
 " ---------------------------------------------------------------------
-set cursorline
+set nocursorline
 augroup BgHighlight
   autocmd!
   autocmd WinEnter * set cul
@@ -135,17 +137,24 @@ if exists("&termguicolors") && exists("&winblend")
   set wildoptions=pum
   set pumblend=5
   set background=dark
+  " set colorcolumn=80
 "    let g:neosolarized_termtrans=1
 "    runtime ./colors/NeoSolarized.vim
 "    colorscheme NeoSolarized
-  colorscheme moonfly
+colorscheme  ayu
   lua << EOF
       vim.o.termguicolors = true
       vim.o.background = "dark"
+      -- color changing 
+      vim.cmd([[:hi NormalFloat guibg=NONE]])
+      vim.cmd([[:hi PMenu guibg=NONE]])
+      vim.cmd([[:hi FloatBorder guibg=NONE]])
       vim.cmd [[
           hi Normal guibg=#080808
       ]]
 EOF
+" color on LineNr (line number)
+highlight LineNr ctermfg=blue ctermbg=white
 endif
 
 "}}}
@@ -166,6 +175,9 @@ let g:coq_settings = { 'auto_start': 'shut-up' }
 let g:indent_blankline_char = '|'
 let g:meh_pandoc_enabled = 1
 let g:enable_mountain_statusline = 1
+
+" set statusline+=%{%v:lua.require'nvim-navic'.get_location()%}
 "}}}
+
 
 " vim: set foldmethod=marker foldlevel=0:
