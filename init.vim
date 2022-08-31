@@ -69,6 +69,7 @@ autocmd InsertLeave * set nopaste
 " Add asterisks in block comments
 set formatoptions+=r
 
+
 "}}}
 
 " Highlights "{{{
@@ -135,17 +136,13 @@ if exists("&termguicolors") && exists("&winblend")
   set termguicolors
   set winblend=0
   set wildoptions=pum
-  set pumblend=5
+  set pumblend=10
   set background=dark
-  " set colorcolumn=80
-"    let g:neosolarized_termtrans=1
-"    runtime ./colors/NeoSolarized.vim
-"    colorscheme NeoSolarized
-colorscheme  ayu
+colorscheme ayu
   lua << EOF
       vim.o.termguicolors = true
       vim.o.background = "dark"
-      -- color changing 
+      -- color changing
       vim.cmd([[:hi NormalFloat guibg=NONE]])
       vim.cmd([[:hi PMenu guibg=NONE]])
       vim.cmd([[:hi FloatBorder guibg=NONE]])
@@ -175,6 +172,23 @@ let g:coq_settings = { 'auto_start': 'shut-up' }
 let g:indent_blankline_char = '|'
 let g:meh_pandoc_enabled = 1
 let g:enable_mountain_statusline = 1
+
+" disable linting while typing
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_open_list = 1
+let g:ale_keep_list_window_open=0
+let g:ale_set_quickfix=0
+let g:ale_list_window_size = 5
+let g:ale_php_phpcbf_standard='PSR2'
+let g:ale_php_phpcs_standard='phpcs.xml.dist'
+let g:ale_php_phpmd_ruleset='phpmd.xml'
+let g:ale_fixers = {
+  \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \ 'php': ['phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace'],
+  \}
+let g:ale_fix_on_save = 1
 
 " set statusline+=%{%v:lua.require'nvim-navic'.get_location()%}
 "}}}
