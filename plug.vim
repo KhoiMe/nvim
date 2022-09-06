@@ -25,12 +25,12 @@ if has("nvim")
     Plug 'williamboman/mason-lspconfig.nvim'
     Plug 'simrat39/symbols-outline.nvim'
     Plug 'folke/lsp-colors.nvim'
-    Plug 'williamboman/nvim-lsp-installer'
     Plug 'tami5/lspsaga.nvim'
     Plug 'onsails/lspkind-nvim'
     Plug 'neovim/nvim-lspconfig'
     Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
     Plug 'ray-x/navigator.lua'
+    " Plug 'williamboman/nvim-lsp-installer'
 
   " treeshitter
     Plug 'nvim-treesitter/nvim-treesitter-refactor'

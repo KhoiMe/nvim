@@ -54,12 +54,13 @@ nmap te :tabedit<Return>
 nmap to :tabNext<Return>
 nmap ta :bnext<CR>
 nmap tn :bprev<CR>
-nmap <leader>w :w !sudo dd of=%<CR>  
-nmap <leader>q :q<CR>  
+nmap <leader>w :w !sudo dd of=%<CR>
+nmap <leader>q :q<CR>
 
 "Files management
-" nmap <leader>ne :NERDTreeToggle<CR>  
+" nmap <leader>ne :NERDTreeToggle<CR>
 nmap <leader>ne :NeoTreeFloatToggle<CR>
+nmap <leader>nu :UndotreeToggle<CR>
 
 " Split window
 nmap ss :split<Return><C-w>w
@@ -82,7 +83,7 @@ nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
 nmap <C-w><down> <C-w>-
 
-" Sourcing luasnip 
+" Sourcing luasnip
 nmap <leader>s :source ~/.config/nvim/after/plugin/luasnip.rc.lua<CR>
 
 " lsp
@@ -93,7 +94,7 @@ nmap <leader>e :Lspsaga diagnostic_jump_prev<CR>
 nnoremap <leader>b :lua require("harpoon.mark").add_file()<CR>
 nnoremap l :lua require("harpoon.ui").toggle_quick_menu()<CR>
 
-nnoremap 1 :lua require("harpoon.ui").nav_file(1)<CR> 
+nnoremap 1 :lua require("harpoon.ui").nav_file(1)<CR>
 nnoremap 2 :lua require("harpoon.ui").nav_file(2)<CR>
 
 nnoremap 3 :lua require("harpoon.ui").nav_file(3)<CR>

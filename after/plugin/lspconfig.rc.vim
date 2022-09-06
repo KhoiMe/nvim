@@ -103,6 +103,11 @@ nvim_lsp.emmet_ls.setup {
   filetypes = { "php", "html", "typescriptreact", "typescript"},
   capabilities = capabilities
 }
+nvim_lsp.html.setup {
+  on_attach = on_attach,
+  filetypes = { "php", "html"},
+  capabilities = capabilities
+}
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
@@ -184,4 +189,9 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 
 require'lspconfig'.ltex.setup{}
 require'lspconfig'.intelephense.setup{}
+require'lspconfig'.html.setup {
+  capabilities = capabilities,
+  filetype = {'html', 'php'}
+}
+
 EOF
