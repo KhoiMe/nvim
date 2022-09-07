@@ -9,6 +9,7 @@ if !1 | finish | endif
 set nocompatible
 set clipboard=unnamedplus
 set undofile
+set completeopt=menuone,noinsert,noselect
 " set guicursor
 set noswapfile
 set updatetime=50
@@ -25,7 +26,7 @@ set nobackup
 set nohlsearch
 set showcmd
 set cmdheight=1
-set laststatus=2
+set laststatus=3
 set scrolloff=10
 set expandtab
 "let loaded_matchparen = 1
@@ -45,7 +46,7 @@ set nosc noru nosm
 set lazyredraw
 "set showmatch
 " How many tenths of a second to blink when matching brackets
-"set mat=2
+set mat=2
 " Ignore case when searching
 set ignorecase
 " Be smart when using tabs ;)
@@ -136,7 +137,7 @@ if exists("&termguicolors") && exists("&winblend")
   set termguicolors
   set winblend=0
   set wildoptions=pum
-  set pumblend=10
+  set pumblend=20
   set background=dark
 colorscheme ayu
   lua << EOF

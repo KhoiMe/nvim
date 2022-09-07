@@ -193,5 +193,8 @@ require'lspconfig'.html.setup {
   capabilities = capabilities,
   filetype = {'html', 'php'}
 }
+local lsp = require "lspconfig"
+local coq = require "coq" -- add this
+
 
 EOF

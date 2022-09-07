@@ -58,8 +58,8 @@ nmap <leader>w :w !sudo dd of=%<CR>
 nmap <leader>q :q<CR>
 
 "Files management
-" nmap <leader>ne :NERDTreeToggle<CR>
-nmap <leader>ne :NeoTreeFloatToggle<CR>
+nmap <leader>ne :NERDTreeToggle<CR>
+" nmap <leader>ne :NeoTreeFloatToggle<CR>
 nmap <leader>nu :UndotreeToggle<CR>
 
 " Split window
