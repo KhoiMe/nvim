@@ -190,8 +190,6 @@ let g:ale_fixers = {
   \ 'php': ['phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace'],
   \}
 let g:ale_fix_on_save = 1
-
-" set statusline+=%{%v:lua.require'nvim-navic'.get_location()%}
 "}}}
 
 

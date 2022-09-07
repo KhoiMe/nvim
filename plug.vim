@@ -14,11 +14,6 @@ if has("nvim")
     Plug 'ms-jpq/coq.thirdparty'
     Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
     Plug 'mattn/emmet-vim'
-    " Plug 'hrsh7th/cmp-nvim-lsp'
-    " Plug 'hrsh7th/cmp-buffer'
-    " Plug 'hrsh7th/nvim-cmp'
-    " Plug 'hrsh7th/cmp-path'
-
 
   " lsp
     Plug 'williamboman/mason.nvim'
@@ -30,7 +25,6 @@ if has("nvim")
     Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
     Plug 'ray-x/navigator.lua'
     Plug 'simrat39/symbols-outline.nvim'
-    " Plug 'williamboman/nvim-lsp-installer'
 
   " treeshitter
     Plug 'nvim-treesitter/nvim-treesitter-refactor'
@@ -48,8 +42,6 @@ if has("nvim")
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
     Plug 'nvim-telescope/telescope-media-files.nvim'
     Plug 'ThePrimeagen/harpoon'
-    " Plug 'kyazdani42/nvim-tree.lua'
-    " Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
   " git utils
     Plug 'lewis6991/gitsigns.nvim'
@@ -62,37 +54,25 @@ if has("nvim")
     Plug 'tpope/vim-commentary'
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
-    Plug 'SmiteshP/nvim-navic'
     Plug 'windwp/nvim-autopairs'
     Plug 'windwp/nvim-ts-autotag'
-    " Plug 'MunifTanjim/nui.nvim'
-    " Plug 'roxma/nvim-yarp'
-    " Plug 'roxma/vim-hug-neovim-rpc'
-    " Plug 'MarcWeber/vim-addon-mw-utils'
-    " Plug 'mhinz/vim-signify'
 
   " snips
     Plug 'L3MON4D3/LuaSnip'
     Plug 'honza/vim-snippets'
     Plug 'rafamadriz/friendly-snippets'
-    " Plug 'garbas/vim-snipmate'
 
   " rndm utils
     Plug 'brymer-meneses/grammar-guard.nvim'
     Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-    " Plug 'tomtom/tlib_vim'
 
   " status lines and blanklines
     Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'itchyny/lightline.vim'
-    " Plug 'glepnir/galaxyline.nvim' , { 'branch': 'main' }
-    " Plug 'nvim-lualine/lualine.nvim'
-    " Plug 'feline-nvim/feline.nvim'
 
   " improvements
     Plug 'lewis6991/impatient.nvim'
     Plug 'phaazon/hop.nvim'
-    " Plug 'lalitmee/browse.nvim'
 
   " specific languages rndm
     Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v0.1.2' }
