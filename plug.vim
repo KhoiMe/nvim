@@ -18,6 +18,7 @@ if has("nvim")
   " lsp
     Plug 'williamboman/mason.nvim'
     Plug 'williamboman/mason-lspconfig.nvim'
+    Plug 'jose-elias-alvarez/null-ls.nvim'
     Plug 'folke/lsp-colors.nvim'
     Plug 'tami5/lspsaga.nvim'
     Plug 'onsails/lspkind-nvim'
@@ -95,6 +96,7 @@ if has("nvim")
     Plug 'olimorris/onedarkpro.nvim'
     Plug 'lunarvim/onedarker.nvim'
     Plug 'lunarvim/darkplus.nvim'
+    Plug 'rebelot/kanagawa.nvim'
     " Plug 'rafi/awesome-vim-colorschemes'
     " Plug 'pradyungn/Mountain', {'rtp': 'vim'}
     " Plug 'svrana/neosolarized.nvim'
