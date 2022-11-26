@@ -1,4 +1,4 @@
-if has("nvim")
+if has('nvim')
   let g:plug_home = stdpath('data') . '/plugged'
 endif
 
@@ -8,11 +8,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
 
-if has("nvim")
+if has('nvim')
   " completion
     Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
     Plug 'ms-jpq/coq.thirdparty'
     Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+    Plug 'samu698/autoIndent.nvim'
     Plug 'mattn/emmet-vim'
 
   " lsp
@@ -23,15 +24,15 @@ if has("nvim")
     Plug 'tami5/lspsaga.nvim'
     Plug 'onsails/lspkind-nvim'
     Plug 'neovim/nvim-lspconfig'
-    Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
-    Plug 'ray-x/navigator.lua'
-    Plug 'simrat39/symbols-outline.nvim'
+    " Plug 'simrat39/symbols-outline.nvim'
+    " Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
+    " Plug 'ray-x/navigator.lua'
 
   " treeshitter
     Plug 'nvim-treesitter/nvim-treesitter-refactor'
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-    Plug 'nvim-treesitter/playground'
     Plug 'romgrk/nvim-treesitter-context'
+    " Plug 'nvim-treesitter/playground'
 
   " spellsitter
     Plug 'lewis6991/spellsitter.nvim'
@@ -45,12 +46,10 @@ if has("nvim")
     Plug 'ThePrimeagen/harpoon'
 
   " git utils
-    Plug 'lewis6991/gitsigns.nvim'
+    " Plug 'lewis6991/gitsigns.nvim'
 
   " nvim utils
     Plug 'norcalli/nvim-colorizer.lua'
-    Plug 'sheerun/vim-polyglot'
-    Plug 'karb94/neoscroll.nvim'
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'tpope/vim-commentary'
     Plug 'nvim-lua/popup.nvim'
@@ -64,8 +63,8 @@ if has("nvim")
     Plug 'rafamadriz/friendly-snippets'
 
   " rndm utils
-    Plug 'brymer-meneses/grammar-guard.nvim'
-    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+    " Plug 'brymer-meneses/grammar-guard.nvim'
+    " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
   " status lines and blanklines
     Plug 'lukas-reineke/indent-blankline.nvim'
@@ -73,10 +72,10 @@ if has("nvim")
 
   " improvements
     Plug 'lewis6991/impatient.nvim'
-    Plug 'phaazon/hop.nvim'
+    " Plug 'phaazon/hop.nvim'
 
   " specific languages rndm
-    Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v0.1.2' }
+    " Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v0.1.2' }
 
   " php
     Plug 'w0rp/ale'
@@ -85,22 +84,25 @@ if has("nvim")
     Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
 
   " rust
-    Plug 'simrat39/rust-tools.nvim'
-    Plug 'rust-lang/rust.vim'
-    Plug 'Saecki/crates.nvim'
+    " Plug 'simrat39/rust-tools.nvim'
+    " Plug 'rust-lang/rust.vim'
+    " Plug 'Saecki/crates.nvim'
 
 
   " colorscheme
-    Plug 'rktjmp/lush.nvim'
-    Plug 'ayu-theme/ayu-vim'
+    Plug 'rebelot/kanagawa.nvim'
+    " Plug 'gruvbox-community/gruvbox'
+    " Plug 'mangeshrex/everblush.vim'
+    " Plug 'morhetz/gruvbox'
+    " Plug 'rktjmp/lush.nvim'
+    " Plug 'ayu-theme/ayu-vim'
     Plug 'olimorris/onedarkpro.nvim'
     Plug 'lunarvim/onedarker.nvim'
-    Plug 'lunarvim/darkplus.nvim'
-    Plug 'rebelot/kanagawa.nvim'
+    " Plug 'lunarvim/darkplus.nvim'
     " Plug 'rafi/awesome-vim-colorschemes'
     " Plug 'pradyungn/Mountain', {'rtp': 'vim'}
     " Plug 'svrana/neosolarized.nvim'
-    " Plug 'sainnhe/sonokai'
+    Plug 'sainnhe/sonokai'
     " Plug 'bluz71/vim-moonfly-colors'
     " Plug 'fxn/vim-monochrome'
     " Plug 'davidosomething/vim-colors-meh'
@@ -108,8 +110,6 @@ if has("nvim")
     " Plug 'ikaros/smpl-vim'
     " Plug 'elvessousa/sobrio'
     " Plug 'catppuccin/vim', { 'as': 'catppuccin' }
-    " Plug 'mangeshrex/everblush.vim'
-    " Plug 'gruvbox-community/gruvbox'
     " Plug 'folke/tokyonight.nvim'
     " Plug 'EdenEast/nightfox.nvim'
     " Plug 'projekt0n/github-nvim-theme'

@@ -4,8 +4,8 @@ endif
 
 lua << EOF
 --vim.lsp.set_log_level("debug")
-require('rust-tools').setup({})
-require("grammar-guard").init()
+--require('rust-tools').setup({})
+--require("grammar-guard").init()
 vim.cmd [[ autocmd BufRead,BufNewFile *.org set filetype=org ]]
 EOF
 
@@ -25,7 +25,6 @@ local on_attach = function(client, bufnr)
 
   -- Mappings.
   local opts = { noremap=true, silent=true }
-
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
   buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -44,18 +43,6 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<S-C-j>', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-
-  -- formatting
-  if client.name == 'tsserver' then
-    client.resolved_capabilities.document_formatting = false
-  end
-
-  if client.resolved_capabilities.document_formatting then
-    vim.api.nvim_command [[augroup Format]]
-    vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-    vim.api.nvim_command [[augroup END]]
-  end
 
   --protocol.SymbolKind = { }
   protocol.CompletionItemKind = {
@@ -92,11 +79,6 @@ end
 --local capabilities = require('cmp_nvim_lsp').update_capabilities(
  -- vim.lsp.protocol.make_client_capabilities()
 --)
-
-nvim_lsp.flow.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
 
 nvim_lsp.emmet_ls.setup {
   on_attach = on_attach,
@@ -176,16 +158,6 @@ nvim_lsp.diagnosticls.setup {
 }
 
 -- icon
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = true,
-    -- This sets the spacing and the prefix, obviously.
-    virtual_text = {
-      spacing = 4,
-      prefix = ''
-    }
-  }
-)
 
 require'lspconfig'.ltex.setup{}
 require'lspconfig'.intelephense.setup{}
@@ -194,15 +166,9 @@ require'lspconfig'.html.setup {
   filetype = {'html', 'php'}
 }
 local lsp = require "lspconfig"
-local coq = require "coq" -- add this
+local coq = require "coq"
+
+require("null-ls").setup()
 
 
 EOF
-
-" require("null-ls").setup({
-"     sources = {
-"         require("null-ls").builtins.formatting.stylua,
-"         require("null-ls").builtins.diagnostics.eslint,
-"         require("null-ls").builtins.completion.spell,
-"     },
-" })

@@ -6,7 +6,6 @@ autocmd!
 scriptencoding utf-8
 " stop loading config if it's on tiny or small
 if !1 | finish | endif
-set nocompatible
 set clipboard=unnamedplus
 set undofile
 set completeopt=menuone,noinsert,noselect
@@ -132,7 +131,7 @@ runtime ./maps.vim
 " ---------------------------------------------------------------------
 
 " true color
-if exists("&termguicolors") && exists("&winblend")
+if exists('&termguicolors') && exists('&winblend')
   syntax enable
   set termguicolors
   set winblend=0
