@@ -149,9 +149,8 @@ colorscheme kanagawa
       vim.cmd [[
           hi Normal guibg=#080808
       ]]
+      vim.cmd([[:hi LineNr guibg=none guifg=#506277]])
 EOF
-" color on LineNr (line number)
-highlight LineNr ctermfg=blue ctermbg=white
 endif
 
 "}}}

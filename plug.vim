@@ -44,6 +44,7 @@ if has('nvim')
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
     Plug 'nvim-telescope/telescope-media-files.nvim'
     Plug 'ThePrimeagen/harpoon'
+    Plug 'mbbill/undotree'
 
   " git utils
     " Plug 'lewis6991/gitsigns.nvim'
